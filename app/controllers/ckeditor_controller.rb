@@ -5,7 +5,7 @@ class CkeditorController < ActionController::Base
   
   # GET /ckeditor/images
   def images
-    @images = Picture.find(:all, :order=>"id DESC")
+    @images = Image.find(:all, :order=>"id DESC")
     
     respond_to do |format|
       format.html {}
