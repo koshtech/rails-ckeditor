@@ -3,13 +3,12 @@
     <tbody>
       <tr>
         <td align="center" valign="middle">
-          <%= image_tag(image.url(:thumb), :alt=>image.url(:content), :title=>image.filename, :onerror=>"this.src='/javascripts/ckeditor/images/ckfnothumb.gif'", :class=>'image' ) %>
+          <%= image_tag('../../../public/uploaded/images/contents', :alt=>image.name, :title=>image.name, :onerror=>"this.src='/javascripts/ckeditor/images/ckfnothumb.gif'", :class=>'image' ) %>
         </td>
        </tr>
      </tbody>
    </table>
    
-   <div class="FCKFileName"><%= image.filename %></div>
-   <div class="FCKFileDate"><%= image.format_created_at %></div>
-   <div class="FCKFileSize"><%= number_to_human_size(image.size, :precision => 2) %></div>
+   <div class="FCKFileName"><%= image.name %></div>
+   <div class="FCKFileDate"><%= image.created_at %></div>
 </div>

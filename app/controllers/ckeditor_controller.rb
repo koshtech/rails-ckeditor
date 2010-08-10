@@ -15,7 +15,7 @@ class CkeditorController < ActionController::Base
   
   # GET /ckeditor/files
   def files
-    @files = AttachmentFile.find(:all, :order=>"id DESC")
+    @files = Image.find(:all, :order=>"id DESC")
     
     respond_to do |format|
       format.html {}
