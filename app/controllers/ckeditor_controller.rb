@@ -5,8 +5,8 @@ class CkeditorController < ActionController::Base
   
   # GET /ckeditor/images
   def images
-    @images = Image.find(:all, :order=>"id DESC")
-    
+   @images = Image.paginate :page => params[:page], :per_page => params[:per_page], :order=>"id DESC"
+
     respond_to do |format|
       format.html {}
       format.xml { render :xml=>@images }
@@ -29,7 +29,7 @@ class CkeditorController < ActionController::Base
     
     @record = case @kind.downcase
       when 'file'  then AttachmentFile.new
-			when 'image' then Picture.new
+			when 'image' then Image.new
 	  end
 	  
 	  unless params[:CKEditor].blank?	  
