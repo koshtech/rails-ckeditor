@@ -1,12 +1,15 @@
 <div class="FCKThumb">
-  <table border="0" cellpadding="0" cellspacing="0" height="100" width="100">
+  <table border="0" cellpadding="0" cellspacing="0">
     <tbody>
       <tr>
         <td align="center" valign="middle">
           <% @images.each do |image| %>
             <td>
 	          <tr>
-                <%= link_to_remote( image_tag( thumb_admin_image_path(image, :png))) %>
+                <%= link_to(image_tag(thumb_admin_image_path(image, :png)),
+ 					{ :controller => "ckeditor",
+	 				  :action => "select_image"})
+	 			%>
               </tr>
             </td>
           <% end %>
@@ -17,3 +20,19 @@
     </tbody>
   </table>
 </div>
+
+<script>
+  function click(){
+    value = window.opener.document.getElementById('69_textInput').value;
+    new_value = 'Kosh é foda!'
+    alert("O valor é " + value);
+    alert("Será alterado para " + new_value);
+    
+    window.opener.document.getElementById('69_textInput').value = new_value;
+    
+    value = window.opener.document.getElementById('69_textInput').value;
+    
+    alert("Agora é " + new_value);
+  }
+</script>
+<p><a href="javascript:click();">Clica!!!!</a></p>

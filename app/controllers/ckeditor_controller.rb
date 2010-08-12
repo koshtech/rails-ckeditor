@@ -87,5 +87,14 @@ class CkeditorController < ActionController::Base
     def escape_single_quotes(str)
       str.gsub('\\','\0\0').gsub('</','<\/').gsub(/\r\n|\n|\r/, "\\n").gsub(/["']/) { |m| "\\#{m}" }
     end
+    
+    def select_image
+      puts"___________________________________________________________________________________________________"
+      puts "fui chamado!!!"
+      
+      render :update do |page|
+        page.replace_html "images"
+      end
+    end
   
 end
