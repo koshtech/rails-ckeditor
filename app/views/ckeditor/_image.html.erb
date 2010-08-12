@@ -8,7 +8,7 @@
 	          <tr>
                 <%= link_to(image_tag(thumb_admin_image_path(image, :png)),
  					{ :controller => "ckeditor",
-	 				  :action => "select_image"})
+	 				  :action => "select_image", :id => image.id})
 	 			%>
               </tr>
             </td>

@@ -1,0 +1,7 @@
+<%
+image_url = image_path(@image, :format => 'jpg')
+%>
+<script>
+  window.opener.document.getElementById('69_textInput').value = '<%= image_url%>';
+  window.close();
+</script>
