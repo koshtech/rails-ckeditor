@@ -7,9 +7,11 @@ class CkeditorController < ActionController::Base
   def images
    @images = Image.paginate :page => params[:page], :per_page => params[:per_page], :order=>"id DESC"
 
-    respond_to do |format|
-      format.html {}
-      format.xml { render :xml=>@images }
+    respond_to_parent do
+      respond_to do |format|
+        format.html {}
+        format.xml { render :xml=>@images }
+      end
     end
   end
   
