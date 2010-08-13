@@ -3,13 +3,11 @@
     <tbody>
       <tr>
         <td align="center" valign="middle">
-          <%= file_image_tag(file.filename, file.url) %>
+          <%= file_image_tag(file.name, file.to_param) %>
         </td>
        </tr>
      </tbody>
    </table>
    
-   <div class="FCKFileName"><%= file.filename %></div>
-   <div class="FCKFileDate"><%= file.format_created_at %></div>
-   <div class="FCKFileSize"><%= number_to_human_size(file.size, :precision => 2) %></div>
+   <div class="FCKFileName"><%= file.name %></div>
 </div>
