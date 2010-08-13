@@ -1,7 +1,13 @@
+<%= javascript_include_tag 'ckeditor/ckeditor' %>
+
 <%
 image_url = image_path(@image, :format => 'jpg')
 %>
 <script>
+
+//  var ckValue = window.open.CKEDITOR.instances;
+//  alert(ckValue);
+
   window.opener.document.getElementById('69_textInput').value = '<%= image_url%>';
   window.close();
 </script>

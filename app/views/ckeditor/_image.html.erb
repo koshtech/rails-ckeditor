@@ -20,19 +20,3 @@
     </tbody>
   </table>
 </div>
-
-<script>
-  function click(){
-    value = window.opener.document.getElementById('69_textInput').value;
-    new_value = 'Kosh é foda!'
-    alert("O valor é " + value);
-    alert("Será alterado para " + new_value);
-    
-    window.opener.document.getElementById('69_textInput').value = new_value;
-    
-    value = window.opener.document.getElementById('69_textInput').value;
-    
-    alert("Agora é " + new_value);
-  }
-</script>
-<p><a href="javascript:click();">Clica!!!!</a></p>
