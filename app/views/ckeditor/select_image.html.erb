@@ -1,13 +1,16 @@
-<%= javascript_include_tag 'ckeditor/ckeditor' %>
-
 <%
 image_url = image_path(@image, :format => 'jpg')
 %>
 <script>
 
-//  var ckValue = window.open.CKEDITOR.instances;
-//  alert(ckValue);
+//  var input = '69_textInput'
+//  var exp = '/\d/_textInput'
+//  window.opener.document.getElementsByClassName('cke_dialog_ui_input_text')[0].value = '<%= image_url%>';
+//  alert(window.opener.document.getElementsByClassName('cke_dialog_ui_input_text')[0].value)
+//  alert(window.opener.document.getElementsByClassName('cke_dialog_ui_input_text').length)
+//  window.opener.document.getElementById(input).value = '<%= image_url%>';
 
   window.opener.document.getElementById('69_textInput').value = '<%= image_url%>';
   window.close();
+
 </script>
