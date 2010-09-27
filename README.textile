@@ -18,7 +18,7 @@ Demo appication:
 
 h2. Install
 
-@./script/plugin install git://github.com/galetahub/rails-ckeditor.git@
+@./script/plugin install git://github.com/lucianosousa/rails-ckeditor.git@
 
 @rake ckeditor:install@
 
