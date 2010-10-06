@@ -36,7 +36,7 @@ CKEDITOR.editorConfig = function( config )
         ['Bold','Italic','Underline','Strike','-','Subscript','Superscript', 'TextColor'],
         ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote'],
         ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
-        ['Link','Unlink','Anchor']
+        ['Link','Unlink','Anchor'],
         ['Image','Table','HorizontalRule','Smiley','SpecialChar','PageBreak']
     ];
 };
